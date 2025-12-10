@@ -27,7 +27,7 @@ $$
 **¿Por qué importa la Inseguridad aquí?**
 > La variable `ln_Inseg` actúa como el driver exógeno de la demanda. El modelo no solo mide ventas, sino que cuantifica el **Factor Miedo**:
 > * En el **Sur ($\beta=0.54$)**: La inseguridad es el detonante principal de la compra. Los clientes reaccionan inmediatamente a la percepción de riesgo comprando más seguridad/delivery.
-> * En el **Norte ($\beta=0.14$)**: La demanda es inelástica a la inseguridad. El mercado se ha 'insensibilizado' o normalizado la violencia, por lo que el marketing no puede depender de este factor.
+> * En el **Norte ($\beta=0.21$)**: La demanda es inelástica a la inseguridad. El mercado se ha 'insensibilizado' o normalizado la violencia, por lo que el marketing no puede depender de este factor.
 
 ### Optimización dinámica 
 Se formuló un Hamiltoniano para maximizar el Valor Presente Neto (VPN) del *Goodwill* (Valor de Marca), sujeto a rendimientos decrecientes y depreciación:
@@ -70,6 +70,7 @@ Se validó la robustez de la estrategia mediante 2,000 simulaciones de Monte Car
 $$
 \text{Shock}_t = \rho \cdot \text{Shock}_{t-1} + \epsilon_t, \quad \epsilon_t \sim N(0, \sigma^2)
 $$
+* **Nota sobre el Riesgo:** Aunque la data histórica muestra reversión a la media ($\rho \approx -0.3$), el Stress Test fuerza una **alta persistencia ($\rho = 0.7$)** para simular escenarios de "pánico social sostenido" (Worst-Case Scenario).
 
 
 
@@ -93,10 +94,10 @@ A pesar de la agresividad de la inversión, el análisis de colas confirma la so
 
 | Métrica | Valor | Interpretación |
 | :--- | :--- | :--- |
-| **VPN Esperado** | **$54,200** | Beneficio neto proyectado (Base). |
-| **VaR 95%** | **$12,500** | Suelo de seguridad en condiciones normales. |
-| **CVaR 95%** | **$-4,200** | Pérdida promedio ante crisis extremas. |
-| **Prob. Pérdida** | **2.4%** | Riesgo de ROI negativo controlado (<5%). |
+| **VPN Esperado** | **$60,990*** | Beneficio neto proyectado (Base). |
+| **VaR 95%** | **$55,875** | Suelo de seguridad en condiciones normales. |
+| **CVaR 95%** | **$54,471** | Pérdida promedio ante crisis extremas. |
+| **Prob. Pérdida** | **0.00%** | Riesgo de ROI negativo controlado (<5%). |
 
 ![Gráfico Riesgo](images/Distribucion%20de%20resultados.png)
 *(Fig 3. Distribución de resultados financieros y zonas de riesgo)*
@@ -119,7 +120,7 @@ Para garantizar la validez externa, los parámetros se calibraron basándose en 
 | Parámetro | Símbolo | Valor | Justificación Económica / Negocio |
 | :--- | :---: | :---: | :--- |
 | **Elasticidad Sur** | $\beta_{Sur}$ | **0.54** | Estimada. Demanda altamente elástica a la percepción de seguridad. |
-| **Elasticidad Norte** | $\beta_{Norte}$ | **0.14** | Estimada. Rigidez en la demanda (posible normalización de la violencia). |
+| **Elasticidad Norte** | $\beta_{Norte}$ | **0.21** | Estimada. Rigidez en la demanda (posible normalización de la violencia). |
 | **Elasticidad Goodwill** | $\gamma$ | **0.40** | Rendimientos decrecientes de la marca (Cobb-Douglas). |
 | **Depreciación Marca** | $\delta$ | **15%** | *Forgetting Curve*: Tasa mensual de olvido publicitario (Adstock). |
 | **Tasa Descuento** | $r$ | **5%** | WACC mensual ajustado por riesgo sectorial alto. |
