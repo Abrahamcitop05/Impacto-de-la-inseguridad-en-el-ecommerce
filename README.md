@@ -24,6 +24,11 @@ $$
 
 **Hallazgo:** Existe una heterogeneidad estructural significativa. La región **Sur** es altamente sensible ($\beta \approx 0.54$), mientras que el **Norte** presenta rigidez ($\beta \approx 0.14$).
 
+**¿Por qué importa la Inseguridad aquí?**
+> La variable `ln_Inseg` actúa como el driver exógeno de la demanda. El modelo no solo mide ventas, sino que cuantifica el **Factor Miedo**:
+> * En el **Sur ($\beta=0.54$)**: La inseguridad es el detonante principal de la compra. Los clientes reaccionan inmediatamente a la percepción de riesgo comprando más seguridad/delivery.
+> * En el **Norte ($\beta=0.14$)**: La demanda es inelástica a la inseguridad. El mercado se ha 'insensibilizado' o normalizado la violencia, por lo que el marketing no puede depender de este factor.
+
 ### Optimización dinámica 
 Se formuló un Hamiltoniano para maximizar el Valor Presente Neto (VPN) del *Goodwill* (Valor de Marca), sujeto a rendimientos decrecientes y depreciación:
 
@@ -72,12 +77,19 @@ $$
 
 ### Divergencia Estratégica (Norte vs. Sur)
 El algoritmo recomienda una estrategia de **"Front-Loading"** agresiva en el Sur para aprovechar la alta elasticidad, mientras sugiere contención de costos en el Norte.
+> **La Inseguridad como Señal de Inversión:**
+> La trayectoria óptima de gasto ($u^*$) no es estática; el algoritmo 'lee' el pronóstico de inseguridad ($I_t$) mes a mes.
+> * Cuando el modelo anticipa una ola de inseguridad, recomienda **inyectar presupuesto** agresivamente en el Sur para capturar esa demanda latente.
+> * Las fluctuaciones que vemos en la línea roja son la **respuesta táctica de la empresa** adaptándose a los picos de criminalidad proyectados.
 
 ![Gráfico Estrategia](images/Divergencia%20Estrategica.png)
 *(Fig 2. Asignación óptima de recursos y ROI comparativo)*
 
 ### Perfil de Riesgo (Risk Profile)
 A pesar de la agresividad de la inversión, el análisis de colas confirma la solvencia de la estrategia.
+**El Riesgo no es el Mercado, es la Calle:**
+> En este modelo, la incertidumbre no proviene de fallas operativas, sino de la **volatilidad criminal**.
+> Las simulaciones de Monte Carlo modelan **'Shocks de Pánico'**: eventos donde la inseguridad se dispara inesperadamente (persistencia $\rho=0.7$). El CVaR nos dice cuánto dinero perdería la empresa si ocurre un estallido social o una crisis de seguridad severa que altere estructuralmente el consumo.
 
 | Métrica | Valor | Interpretación |
 | :--- | :--- | :--- |
