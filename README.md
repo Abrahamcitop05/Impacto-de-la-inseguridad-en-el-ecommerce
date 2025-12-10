@@ -32,13 +32,13 @@ $$
 ### Optimización dinámica 
 Se formuló un Hamiltoniano para maximizar el Valor Presente Neto (VPN) del *Goodwill* (Valor de Marca), sujeto a rendimientos decrecientes y depreciación:
 
-$$
-\max_{u(t)} \int_{0}^{T} e^{-rt} \left[ P \cdot V(G, I) - u(t) \right] dt
-$$
 
+$$
+\max_{\{u_t\}_{t=0}^{T}} \sum_{t=0}^{T} e^{-rt} \left[ P \cdot V(I_t, G_t) - u_t \right]
+$$
 Sujeto a la ecuación de movimiento del Goodwill:
 $$
-\dot{G}(t) = \sqrt{u(t)} - \delta G(t)
+G_{t+1} = (1-\delta)G_t + \sqrt{u_t}
 $$
 
 Donde las variables se definen como:
