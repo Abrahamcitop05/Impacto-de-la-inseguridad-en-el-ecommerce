@@ -80,7 +80,7 @@ El algoritmo recomienda una estrategia de **"Front-Loading"** agresiva en el Sur
 > **La Inseguridad como Señal de Inversión:**
 > La trayectoria óptima de gasto ($u^*$) no es estática; el algoritmo 'lee' el pronóstico de inseguridad ($I_t$) mes a mes.
 > * Cuando el modelo anticipa una ola de inseguridad, recomienda inyectar presupuesto agresivamente en el Sur para capturar esa demanda latente.
-> * Lasla saturación en el techo que vemos en la línea roja son la respuesta táctica de la empresa adaptándose a los picos de criminalidad proyectados y a la alta sensibilidad del consumidor en esa región.
+> * La saturación en el techo que vemos en la línea roja son la respuesta táctica de la empresa adaptándose a los picos de criminalidad proyectados y a la alta sensibilidad del consumidor en esa región.
 
 ![Gráfico Estrategia](images/Divergencia%20Estrategica.png)
 *(Fig 2. Asignación óptima de recursos)*
