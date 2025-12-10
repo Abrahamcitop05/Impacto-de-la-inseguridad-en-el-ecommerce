@@ -79,17 +79,17 @@ $$
 El algoritmo recomienda una estrategia de **"Front-Loading"** agresiva en el Sur para aprovechar la alta elasticidad, mientras sugiere contención de costos en el Norte.
 > **La Inseguridad como Señal de Inversión:**
 > La trayectoria óptima de gasto ($u^*$) no es estática; el algoritmo 'lee' el pronóstico de inseguridad ($I_t$) mes a mes.
-> * Cuando el modelo anticipa una ola de inseguridad, recomienda **inyectar presupuesto** agresivamente en el Sur para capturar esa demanda latente.
-> * Las fluctuaciones que vemos en la línea roja son la **respuesta táctica de la empresa** adaptándose a los picos de criminalidad proyectados.
+> * Cuando el modelo anticipa una ola de inseguridad, recomienda inyectar presupuesto agresivamente en el Sur para capturar esa demanda latente.
+> * Lasla saturación en el techo que vemos en la línea roja son la respuesta táctica de la empresa adaptándose a los picos de criminalidad proyectados y a la alta sensibilidad del consumidor en esa región.
 
 ![Gráfico Estrategia](images/Divergencia%20Estrategica.png)
-*(Fig 2. Asignación óptima de recursos y ROI comparativo)*
+*(Fig 2. Asignación óptima de recursos)*
 
 ### Perfil de Riesgo (Risk Profile)
 A pesar de la agresividad de la inversión, el análisis de colas confirma la solvencia de la estrategia.
 **El Riesgo no es el Mercado, es la Calle:**
-> En este modelo, la incertidumbre no proviene de fallas operativas, sino de la **volatilidad criminal**.
-> Las simulaciones de Monte Carlo modelan **'Shocks de Pánico'**: eventos donde la inseguridad se dispara inesperadamente (persistencia $\rho=0.7$). El CVaR nos dice cuánto dinero perdería la empresa si ocurre un estallido social o una crisis de seguridad severa que altere estructuralmente el consumo.
+> En este modelo, la incertidumbre no proviene de fallas operativas, sino de la volatilidad criminal.
+> Las simulaciones de Monte Carlo modelan 'Shocks de Pánico': eventos donde la inseguridad se dispara inesperadamente (persistencia $\rho=0.7$). El CVaR nos dice cuánto dinero perdería la empresa si ocurre un estallido social o una crisis de seguridad severa que altere estructuralmente el consumo.
 
 | Métrica | Valor | Interpretación |
 | :--- | :--- | :--- |
@@ -107,9 +107,9 @@ Estos valores definen las restricciones y los incentivos financieros del algorit
 
 | Variable | Símbolo | Valor Asumido | Impacto en el Modelo |
 | :--- | :---: | :---: | :--- |
-| **Margen Unitario** | $P$ | **$3.00** | Ganancia neta promedio por cada venta. Es el multiplicador de ingresos en el Hamiltoniano. Si $P$ fuera menor, la inversión óptima caería. |
-| **Techo Presupuestal** | $u_{max}$ | **$500 / mes** | Restricción de liquidez (Constraint). Simula el presupuesto máximo aprobado por Finanzas. Explica por qué la curva de inversión se "aplana" en el tope. |
-| **Goodwill Inicial** | $G_0$ | **100 pts** | Punto de partida del stock de marca. Simula una empresa en marcha, no una startup desde cero. |
+| **Margen Unitario** | $P$ | **$3.00** | Ganancia neta promedio por cada venta. Es el multiplicador de ingresos en el Hamiltoniano. |
+| **Techo Presupuestal** | $u_{max}$ | **$500 / mes** | Restricción de liquidez (Constraint). Simula el presupuesto máximo aprobado por Finanzas. |
+| **Goodwill Inicial** | $G_0$ | **100 pts** | Punto de partida del stock de marca. |
 | **Costo de Oportunidad** | $r$ | **5%** | Tasa mensual. El modelo descuenta los flujos futuros agresivamente, priorizando ganancias a corto plazo sobre el muy largo plazo. |
 
 ## Supuestos 
