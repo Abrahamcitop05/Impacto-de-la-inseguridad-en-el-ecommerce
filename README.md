@@ -47,8 +47,8 @@ Donde las variables se definen como:
 
 Para garantizar la estabilidad matemática de la solución, se analizó el **Espacio de Fase** del sistema Hamiltoniano. El gráfico muestra la interacción entre el stock de marca ($G_t$) y su precio sombra ($\lambda_t$).
 
-![Diagrama de Fase](images/diagrama_fase.png)
-*(Fig 3. Senda de Punto de Silla y convergencia teórica)*
+![Diagrama de Fase](images/Dinamica%20del%20sistema.png)
+*(Fig 1. Punto de silla y convergencia)*
 
 **Interpretación del Gráfico:**
 1.  **Isoclinas (Líneas Punteadas):**
@@ -73,8 +73,8 @@ $$
 ### Divergencia Estratégica (Norte vs. Sur)
 El algoritmo recomienda una estrategia de **"Front-Loading"** agresiva en el Sur para aprovechar la alta elasticidad, mientras sugiere contención de costos en el Norte.
 
-![Gráfico Estrategia](ruta_a_tu_imagen_comparativa_roi.png)
-*(Fig 1. Asignación óptima de recursos y ROI comparativo)*
+![Gráfico Estrategia](images/Divergencia%20Estrategica.png)
+*(Fig 2. Asignación óptima de recursos y ROI comparativo)*
 
 ### Perfil de Riesgo (Risk Profile)
 A pesar de la agresividad de la inversión, el análisis de colas confirma la solvencia de la estrategia.
@@ -86,8 +86,8 @@ A pesar de la agresividad de la inversión, el análisis de colas confirma la so
 | **CVaR 95%** | **$-4,200** | Pérdida promedio ante crisis extremas. |
 | **Prob. Pérdida** | **2.4%** | Riesgo de ROI negativo controlado (<5%). |
 
-![Gráfico Riesgo](ruta_a_tu_imagen_risk_profile.png)
-*(Fig 2. Distribución de resultados financieros y zonas de riesgo)*
+![Gráfico Riesgo](images/Distribucion%20de%20resultados.png)
+*(Fig 3. Distribución de resultados financieros y zonas de riesgo)*
 
 ### Parámetros financieros
 
