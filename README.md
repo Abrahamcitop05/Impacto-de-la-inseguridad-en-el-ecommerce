@@ -43,6 +43,21 @@ Donde las variables se definen como:
 * **$\lambda(t)$ (Co-estado):** El **Precio Sombra** del Goodwill.
 * **$V(G, I)$:** La función de ingresos, que depende del Goodwill y del nivel exógeno de Inseguridad ($I$).
 * **$\delta$:** Tasa de depreciación u "olvido" de la marca.
+* ### Dinámica del Sistema
+
+Para garantizar la estabilidad matemática de la solución, se analizó el **Espacio de Fase** del sistema Hamiltoniano. El gráfico muestra la interacción entre el stock de marca ($G_t$) y su precio sombra ($\lambda_t$).
+
+![Diagrama de Fase](images/diagrama_fase.png)
+*(Fig 3. Senda de Punto de Silla y convergencia teórica)*
+
+**Interpretación del Gráfico:**
+1.  **Isoclinas (Líneas Punteadas):**
+    * **Verde ($\dot{G}=0$):** Puntos donde el stock de capital se mantiene constante.
+    * **Azul ($\dot{\lambda}=0$):** Puntos donde la valoración marginal de la marca se estabiliza.
+    * **Cruce (Estado Estacionario):** El punto de equilibrio teórico de largo plazo.
+
+2.  **Senda Óptima (Línea Roja):**
+    Representa la estrategia ejecutada por el algoritmo. La trayectoria busca converger hacia el Estado Estacionario (siguiendo la propiedad de *Turnpike*), pero se detiene antes de alcanzarlo debido a la **restricción de horizonte finito** ($T=24$ meses) y la condición de transversalidad, que fuerza a cero el valor de la inversión al final del ciclo.
 
 ### Stress Testing (Monte Carlo AR-1)
 Se validó la robustez de la estrategia mediante 2,000 simulaciones de Monte Carlo con procesos autoregresivos para capturar la "memoria" del miedo:
